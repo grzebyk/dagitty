@@ -80,7 +80,7 @@ var GraphSerializer = {
 		_.each(g.edges,function(e){
 			es = e.toString( barewordre )
 			eop = []
-			if( e.layout_pos_x ){
+			if( typeof e.layout_pos_x !== "undefined" ){
 				eop.push("pos=\"" + 
 					e.layout_pos_x.toFixed(3) + "," + 
 					e.layout_pos_y.toFixed(3) + "\"")
